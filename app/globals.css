@@ -1,0 +1,150 @@
+:root {
+  --bg: #f4f9f4;
+  --surface: #ffffff;
+  --text: #1d2b1f;
+  --primary: #266d2f;
+  --muted: #5f7060;
+  --border: #d9e6d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(38, 109, 47, 0.08);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 100px;
+  background: #edf2ed;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2f8f3d, #58b266);
+  transition: width 0.2s ease;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 700px) {
+  .grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #cbdacb;
+  border-radius: 10px;
+  padding: 0.65rem;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #e8f2e8;
+  color: var(--text);
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  border: 1px dashed #aac7aa;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  color: #426346;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
